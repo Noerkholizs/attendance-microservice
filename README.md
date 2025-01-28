@@ -26,13 +26,13 @@ Microservice untuk manajemen kehadiran (attendance) karyawan, termasuk fitur WFO
 
 ## Instalasi
 1. Clone repositori ini:
-    git clone https://github.com/username/attendance-microservice.git
+    - git clone https://github.com/username/attendance-microservice.git
     
 2. Masuk ke folder proyek:
-    cd attendance-microservice
+    - cd attendance-microservice
 
 3. Install dependensi:
-    npm install
+    - npm install
 
 4. Buat file .env di root proyek dan isi dengan environment variables yang diperlukan:
     Contoh: 
@@ -40,7 +40,7 @@ Microservice untuk manajemen kehadiran (attendance) karyawan, termasuk fitur WFO
     PORT=3000
 
 5. Jalankan proyek;
-    npm run dev
+    - npm run dev
 
 
 ## Script
