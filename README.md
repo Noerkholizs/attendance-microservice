@@ -35,9 +35,9 @@ Microservice untuk manajemen kehadiran (attendance) karyawan, termasuk fitur WFO
     - npm install
 
 4. Buat file .env di root proyek dan isi dengan environment variables yang diperlukan:
-    Contoh: 
-    MONGO_URI=mongodb://localhost:27017/attendance
-    PORT=3000
+    - Contoh: 
+        - MONGO_URI=mongodb://localhost:27017/attendance
+        - PORT=3000
 
 5. Jalankan proyek;
     - npm run dev
