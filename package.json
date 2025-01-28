@@ -1,24 +1,32 @@
 {
-  "name": "ms-attendance",
+  "name": "attendance-microservice",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Microservice untuk manajemen kehadiran karyawan",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "dev3": "nodemon --exec ts-node src/server.ts",
+    "dev2": "node dist/server.js",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "jest",
     "lint": "eslint src --fix",
     "format": "prettier --write src"
   },
   "keywords": [],
-  "author": "",
+  "author": "PT.Smooets Teknologi Outsourcing",
   "license": "ISC",
-  "description": "",
   "volta": {
     "node": "22.11.0",
     "npm": "11.0.0"
   },
   "dependencies": {
     "@hapi/hapi": "^21.3.12",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/vision": "^7.0.3",
+    "config": "^3.3.12",
     "dotenv": "^16.4.7",
+    "hapi-swagger": "^17.3.2",
     "mongoose": "^8.9.5"
   },
   "devDependencies": {
@@ -26,6 +34,8 @@
     "@types/jest": "^29.5.14",
     "@types/node": "^22.12.0",
     "husky": "^9.1.7",
+    "nodemon": "^3.1.9",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.7.3"
   }
 }

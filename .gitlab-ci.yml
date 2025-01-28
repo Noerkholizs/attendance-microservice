@@ -1,0 +1,30 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  DOCKER_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t $DOCKER_TAG .
+    - docker push $DOCKER_TAG
+
+test:
+  stage: test
+  image: node:22.11.0
+  script:
+    - npm ci
+    - npm test
+
+deploy:
+  stage: deploy
+  variables:
+    ENVIRONMENT: "prod"
+  script:
+    - echo "Deploying to $ENVIRONMENT..."
